@@ -6,7 +6,7 @@
         "url": "https://github.com/mjbozzo/mjbozzo-unlock-screen-ios.git"
     },
     "version": "0.0.1",
-    "devDependencies": {
+    "dependencies": {
         "webpack": "~1.8.2",
         "grunt-cli": "~0.1.13",
         "react-tools": "~0.13.1",
