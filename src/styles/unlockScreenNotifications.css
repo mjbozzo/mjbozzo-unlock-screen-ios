@@ -1,0 +1,85 @@
+.unlock-screen-notifications {
+    height: 250px;
+    margin-bottom: 10%;
+}
+
+.unlock-screen-notifications .with-border {
+    border-top: 1px solid #424242;
+}
+
+.unlock-screen-notifications .notificationsList {
+    overflow: hidden;
+}
+
+.unlock-screen-notifications div.notification {
+    float: left;
+    width: 94%;
+    padding: 17px 0;
+    line-height: 0.7em;
+    margin-left: 15px;
+}
+
+.unlock-screen-notifications div.notification .row,
+.unlock-screen-notifications div.notification .message,
+.unlock-screen-notifications div.notification .slide-message {
+    width: 82%;
+    float: left;
+    text-align: left;
+    font-family: helveticaNeue, serif;
+    color: white;
+    padding-left: 12px;
+}
+
+.unlock-screen-notifications div.notification .row .time {
+    font-size: 0.5em;
+    margin-left: 10px;
+}
+
+.unlock-screen-notifications div.notification .row .time,
+.unlock-screen-notifications div.notification .message .slide-to-view {
+    color: #4c60da;
+}
+
+.unlock-screen-notifications div.notification .message,
+.unlock-screen-notifications div.notification .slide-message {
+    padding-left: 2.3em;
+}
+
+.unlock-screen-notifications div.notification .message {
+    font-size: 0.5em;
+}
+
+.unlock-screen-notifications div.notification .slide-message {
+    font-size: 80%;
+}
+
+.unlock-screen-notifications div.notification span.application {
+    font-family: helveticaNeue, serif;
+    font-weight: bold;
+    font-size: 0.6em;
+}
+
+.unlock-screen-notifications div.notification .icon img {
+    float: left;
+    width: 8%;
+}
+
+/* iPhone6 */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+    .unlock-screen-notifications div.notification .message,
+    .unlock-screen-notifications div.notification .slide-message {
+        padding-left: 2.6em;
+    }
+}
+
+/* iPhone6 Plus */
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+    .unlock-screen-notifications div.notification .message,
+    .unlock-screen-notifications div.notification .slide-message {
+        padding-left: 0.8em;
+    }
+}

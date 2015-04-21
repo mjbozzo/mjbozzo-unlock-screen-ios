@@ -1,0 +1,101 @@
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    color: white;
+    font-size: 2em;
+}
+
+@font-face {
+    font-family: helveticaNeue;
+    src: url('../fonts/HelveticaNeue/Helvetica_Neue.ttf');
+}
+
+@font-face {
+    font-family: helveticaNeueLight;
+    src: url('../fonts/HelveticaNeue/Helvetica_Neue_Light.ttf');
+}
+
+@font-face {
+    font-family: helveticaNeueUltralight;
+    src: url('../fonts/HelveticaNeue/Helvetica_Neue_UltraLight.ttf');
+}
+
+@font-face {
+    font-family: helveticaNeueBold;
+    src: url('../fonts/HelveticaNeue/Helvetica_Neue_Bold.ttf');
+}
+
+.unlock-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/background.png);
+    height: 100%;
+    width: 200%;
+    font-family: helveticaNeueUltralight, serif;
+}
+
+.unlock-screen .content {
+    width: 50%;
+    position: relative;
+    text-align: center;
+    height: 90%;
+}
+
+.unlock-screen .footer {
+    width: 50%;
+    margin-left: 2%;
+    position: absolute;
+    bottom: 0;
+}
+
+.unlock-screen .footer .handler {
+    float: left;
+    width: 10%;
+    height: 13px;
+    margin-left: 41%;
+    margin-top: 4%;
+    margin-right: 18%;
+    position: relative;
+    background: url(../images/bottombar.png) no-repeat;
+    background-size: contain;
+}
+
+.unlock-screen .footer .camera {
+    position: relative;
+    margin-left: 15%;
+    float: left;
+    width: 10%;
+    height: 35px;
+    background: url(../images/camera.png) no-repeat;
+    background-size: contain;
+}
+
+.unlock-screen .unlock-slider {
+    background: url(../images/unlock-slider.gif) no-repeat;
+    background-size: contain;
+    height: 39px;
+    width: 250px;
+    margin: 0 auto;
+}
+
+/* iPhone6 */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+    .unlock-screen .unlock-slider {
+        margin: 4em auto 0 auto;
+    }
+}
+
+/* iPhone6 Plus */
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+    .unlock-screen .unlock-slider {
+        margin: 6em auto 0 auto;
+    }
+}
