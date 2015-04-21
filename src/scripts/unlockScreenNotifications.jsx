@@ -1,16 +1,15 @@
 var React = require('react/addons');
-    Configuration = require('../configuration.js');
 
-require('../../styles/unlockScreenNotifications.css');
+require('../styles/unlockScreenNotifications.css');
 
 module.exports = React.createClass({
-    render: function() {
+    render: function () {
         var notifications = '';
-        if (Configuration.notifications) {
-            var notificationClass = (Configuration.notifications.length > 1)?
+        if (this.props.config.notifications) {
+            var notificationClass = (this.props.config.notifications.length > 1) ?
                 'notification with-border' : 'notification';
-            notifications = Configuration.notifications.map(
-                function(notification, i) {
+            notifications = this.props.config.notifications.map(
+                function (notification, i) {
                     return (
                         <div key={i} className={notificationClass}>
                             <div className="icon">

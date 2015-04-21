@@ -1,15 +1,14 @@
 var React = require('react/addons'),
     $ = jQuery = require('jquery'),
-    Configuration = require('../configuration.js'),
     UnlockScreenClock = require('./unlockScreenClock.jsx'),
     UnlockScreenNotifications = require('./unlockScreenNotifications.jsx');
 
 require('jquery-ui/draggable');
 require('jquery-ui-touch-punch');
-require('../../styles/unlockScreen.css');
+require('../styles/unlockScreen.css');
 
 module.exports = React.createClass({
-    componentDidMount: function() {
+    componentDidMount: function () {
         var edge = 183,
             ableToUnlock = false;
 
@@ -17,14 +16,14 @@ module.exports = React.createClass({
             axis: 'x',
             containment: 'parent',
             scroll: false,
-            drag: function(event, ui) {
+            drag: function (event, ui) {
                 ableToUnlock = ui.offset.left >= edge;
                 $('.camera').css('left', ui.position.left);
                 $('.handler').css('top', ui.position.left / 16);
             },
-            stop: function() {
-                if (ableToUnlock && Configuration.unlockActionCallback) {
-                    Configuration.unlockActionCallback();
+            stop: function () {
+                if (ableToUnlock && this.props.config.unlockActionCallback) {
+                    this.props.config.unlockActionCallback();
                 } else {
                     $('.content').animate({left: '0'}, 750);
                     $('.camera').animate({left: '0'}, 750);
@@ -33,12 +32,12 @@ module.exports = React.createClass({
             }
         });
     },
-    render: function() {
+    render: function () {
         return (
             <div data-role="page" className="unlock-screen">
                 <div className="content">
                     <UnlockScreenClock />
-                    <UnlockScreenNotifications />
+                    <UnlockScreenNotifications config={this.props.config}/>
                     <div className="unlock-slider"></div>
                 </div>
                 <div className="footer">

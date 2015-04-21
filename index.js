@@ -1,1 +1,1 @@
-module.exports = require('./src/scripts/components/unlockScreen.jsx');
+module.exports = require('./src/scripts/unlockScreen.jsx');

@@ -1,9 +1,8 @@
 var React = require('react/addons'),
-    $ = require('jquery'),
-    Configuration = require('../configuration.js');
+    $ = require('jquery');
 
 require('jquery-ui/datepicker');
-require('../../styles/unlockScreenClock.css');
+require('../styles/unlockScreenClock.css');
 
 module.exports = React.createClass({
     getDefaultProps: function () {
@@ -17,14 +16,14 @@ module.exports = React.createClass({
 
         //Format hour correctly if needed
         var hour = this.props.twelveHoursClock && currentHour > 12 ?
-            currentHour % 12 : currentHour;
+        currentHour % 12 : currentHour;
 
         //Update hour to 12 if it is set to 0 in 12-hour format
         this.setState({
             currentHour: this.props.twelveHoursClock && hour === 0 ?
                 12 : hour,
             currentMinutes: (date.getMinutes() < 10 ? '0' : '') +
-                date.getMinutes()
+            date.getMinutes()
         });
     },
     componentDidMount: function () {
@@ -36,7 +35,7 @@ module.exports = React.createClass({
     componentWillMount: function () {
         this.getCurrentTime();
     },
-    render: function() {
+    render: function () {
         return (
             <div className="unlock-screen-clock">
                 <p className="current-time">
