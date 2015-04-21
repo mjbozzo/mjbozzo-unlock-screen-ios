@@ -1,6 +1,7 @@
 {
     "name": "react-unlock-screen",
     "description": "React Unlock Screen component",
+    "main": "index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/mjbozzo/mjbozzo-unlock-screen-ios.git"
