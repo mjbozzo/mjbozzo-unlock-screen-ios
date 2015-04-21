@@ -10,7 +10,8 @@ require('../styles/unlockScreen.css');
 module.exports = React.createClass({
     componentDidMount: function () {
         var edge = 183,
-            ableToUnlock = false;
+            ableToUnlock = false,
+            unlockScreenConfig = this.props.config;
 
         $('.content').draggable({
             axis: 'x',
@@ -22,8 +23,8 @@ module.exports = React.createClass({
                 $('.handler').css('top', ui.position.left / 16);
             },
             stop: function () {
-                if (ableToUnlock && this.props.config.unlockActionCallback) {
-                    this.props.config.unlockActionCallback();
+                if (ableToUnlock && unlockScreenConfig.unlockActionCallback) {
+                    unlockScreenConfig.unlockActionCallback();
                 } else {
                     $('.content').animate({left: '0'}, 750);
                     $('.camera').animate({left: '0'}, 750);
